@@ -1,0 +1,163 @@
+#header
+{
+    display: none;
+}
+
+nav
+{
+    display: none;
+}
+
+form
+{
+    display: none;
+}
+
+.popup-position, .popup-position-form
+{
+    display: none;
+}
+
+a
+{
+    display: none;
+}
+
+#popup-container
+{
+    display: none;
+}
+/* MAIN */
+
+#main {
+    margin-bottom: 50px;
+    
+}
+
+    /*Cabeçalho*/
+
+    #main header#head
+    {
+		background-color: white;
+		top: 0;
+        height: 100px;
+    }
+
+    #main header#head img
+    {
+        position: block;
+        float: right;
+    }
+
+    #main header#head a
+    {
+        position: absolute;
+        top: 0px; 
+        right: 0px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+        height: 2em;
+        line-height: 2em;
+        padding: 0 1.5em;
+        border-radius: 5px;
+        color: #414f57 ;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #main header#head a:hover
+    {
+        background-color: rgba(0,0,0,0.05);
+        color: black;
+    }
+
+    #main header#head form
+    {
+        display: block;
+        text-transform: uppercase;
+        margin-left: 50px;
+        padding-top: 30px;
+    }
+
+    span#print
+    {
+        display: none;
+    }
+
+
+    /*SECTIONS*/
+
+    section
+    {
+        display: block;
+        float: none;
+        padding: 0px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+
+    #main .dark
+    {
+        background-color: rgba(0,0,0,0.06);
+        color: rgba(0,0,0,0.7);
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+        /*Tabelas*/
+
+        table
+        {
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #cecece;
+            border-left: none;
+            border-right: none;
+            border-spacing: 0px;
+            text-align: center;
+        }
+
+        table td
+        {
+            text-transform: uppercase;
+            font-size: 12pt;
+            width: 149px;
+            border-right: 1px solid #cecece;
+            border-bottom: 1px solid #cecece;
+            padding: 5px;
+        }
+
+
+        table td.date
+        {
+            background: whitesmoke;
+        }
+
+        table td.btn
+        {
+            border-right: none;
+            width: 45px;
+            vertical-align: top;
+        }
+
+        table span
+        {
+            display: block;
+            float: right;
+            margin-bottom: 5px;
+
+
+        }
+
+        table caption
+        {
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 13pt;
+            border-bottom: 1px solid #cecece;
+            margin-left: 20px;
+        }

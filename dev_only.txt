@@ -1,0 +1,50 @@
+//base
+
+    <?php
+        session_start();
+        if(empty($_SESSION['user']))
+            header("Location: index.php");
+    ?>
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href=""> 
+    </head>
+    <body>
+
+    </body>
+    </html>
+
+
+
+//criptografar senha
+    
+    echo password_hash($pass,PASSWORD_DEFAULT);
+    
+    
+//popup
+    
+    //form
+    <div id="popup_" class="popup-position-form">
+        <div id="popup-wrapper">
+            <div id="popup-container">
+                <a class='times-form' href="javascript:void(0)" onclick="toggle_visibility('popup_')"><h1>&times;</h1></a>
+                
+            </div>
+        </div>    
+    </div>
+    
+    //normal
+    <div id="popup" class="popup-position">
+        <div id="popup-wrapper">
+            <div id="popup-container">
+                <a class='times' href="javascript:void(0)" onclick="toggle_visibility('popup_')"><h1>&times;</h1></a>
+                
+            </div>
+        </div>    
+    </div>
+    
+    <li><a href="javascript:void(0)" onclick="toggle_visibility('popup')">Adicionar</a></li>
