@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: sqldb
+    volumes:
+      - ./data/db:/var/lib/mysql
+      - ./initsql/bombeiros.sql:/data/application/init.sql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: bombeiros
+      MYSQL_DATABASE: bombeiros
+      MYSQL_USER: bombeiros
+      MYSQL_PASSWORD: bombeiros
+
+  php:
+    container_name: php
+    image: php
+    restart: always
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:80
+    environment:
+      MYSQL_HOST: db

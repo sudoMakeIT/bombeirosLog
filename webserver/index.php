@@ -20,24 +20,27 @@
         $query = "select password from cadastro where username='$user' limit 1";
         $resultados = mysqli_query($dbc,$query);
 
-        if($resultados)
-        {
-            $row = mysqli_fetch_assoc($resultados); //ler resultados
-            if(strcmp($pass,$row['password'])==0)  
-            {
-                $_SESSION['user'] = $user;
-                header("location: database.php");
-            }
-            else
-            {
-                $_SESSION['msg'] = "Informações Incorretas!";
-            }
-        }
-        else
-        {
-            $_SESSION['msg'] = "Informações Incorretas!";
-        }
+        // if($resultados)
+        // {
+        //     $row = mysqli_fetch_assoc($resultados); //ler resultados
+        //     if(strcmp($pass,$row['password'])==0)  
+        //     {
+        //         $_SESSION['user'] = $user;
+        //         header("location: database.php");
+        //     }
+        //     else
+        //     {
+        //         $_SESSION['msg'] = "Informações Incorretas!";
+        //     }
+        // }
+        // else
+        // {
+        //     $_SESSION['msg'] = "Informações Incorretas!";
+        // }
 
+		//login disabled
+		$_SESSION['user'] = $user;
+		header("location: database.php");
 
     }
 
